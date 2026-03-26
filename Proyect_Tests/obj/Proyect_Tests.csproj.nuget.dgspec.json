@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Isaac\\OneDrive\\Desktop\\Progra\\copia\\FamilyGraph\\Proyect_Tests\\Proyect_Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Isaac\\OneDrive\\Desktop\\Progra\\copia\\FamilyGraph\\Proyecto Grafos\\Proyecto Grafos.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Isaac\\OneDrive\\Desktop\\Progra\\copia\\FamilyGraph\\Proyecto Grafos\\Proyecto Grafos.csproj",
+        "projectName": "Proyecto Grafos",
+        "projectPath": "C:\\Users\\Isaac\\OneDrive\\Desktop\\Progra\\copia\\FamilyGraph\\Proyecto Grafos\\Proyecto Grafos.csproj",
+        "UsingMicrosoftNETSdk": false,
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\Isaac\\OneDrive\\Desktop\\Progra\\copia\\FamilyGraph\\Proyect_Tests\\Proyect_Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Isaac\\OneDrive\\Desktop\\Progra\\copia\\FamilyGraph\\Proyect_Tests\\Proyect_Tests.csproj",
+        "projectName": "Proyect_Tests",
+        "projectPath": "C:\\Users\\Isaac\\OneDrive\\Desktop\\Progra\\copia\\FamilyGraph\\Proyect_Tests\\Proyect_Tests.csproj",
+        "packagesPath": "C:\\Users\\Isaac\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Isaac\\OneDrive\\Desktop\\Progra\\copia\\FamilyGraph\\Proyect_Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Isaac\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {
+              "C:\\Users\\Isaac\\OneDrive\\Desktop\\Progra\\copia\\FamilyGraph\\Proyecto Grafos\\Proyecto Grafos.csproj": {
+                "projectPath": "C:\\Users\\Isaac\\OneDrive\\Desktop\\Progra\\copia\\FamilyGraph\\Proyecto Grafos\\Proyecto Grafos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "GMap.NET.Core": {
+              "target": "Package",
+              "version": "[2.1.7, )"
+            },
+            "GMap.NET.WinForms": {
+              "target": "Package",
+              "version": "[2.1.7, )"
+            },
+            "MSTest": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[18.0.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
