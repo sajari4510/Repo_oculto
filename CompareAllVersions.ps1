@@ -15,8 +15,10 @@ $timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
 $resultsDir = Join-Path $OutputDir "Comparison_$timestamp"
 New-Item -ItemType Directory -Path $resultsDir -Force | Out-Null
 
+# Usar punto y coma como separador: Excel en espanol lo reconoce como columnas automaticamente
+$sep = ","
 $csvFile = Join-Path $resultsDir "all_results.csv"
-"Version,TestCase,Iteration,AddTimeMs,SearchTimeMs,LayoutTimeMs,PeakMemoryMB" | Out-File $csvFile
+"Version${sep}TestCase${sep}Iteration${sep}AddTimeMs${sep}SearchTimeMs${sep}LayoutTimeMs${sep}PeakMemoryMB" | Out-File $csvFile -Encoding UTF8
 
 # Verificar que los tres exe existen antes de empezar
 $missingAny = $false
@@ -55,7 +57,7 @@ foreach ($version in $versions) {
                     foreach ($line in $content) {
                         if ($line -match "Elapsed Time") { $time = ($line -replace '\D','') }
                     }
-                    "$($version.Name),$size,$iter,$time,0" | Out-File -Append $csvFile
+                    "$($version.Name)${sep}$size${sep}$iter${sep}$time${sep}0${sep}0${sep}0" | Out-File -Append $csvFile -Encoding UTF8
                 }
             } else {
                 $outFile = Join-Path $versionDir "${size}_${iter}.txt"
@@ -74,7 +76,7 @@ foreach ($version in $versions) {
                         if ($l -match "^SearchTimeMs:(\d+)")  { $searchTime = $matches[1] }
                         if ($l -match "^LayoutTimeMs:(\d+)")  { $layoutTime = $matches[1] }
                         if ($l -match "^PeakMemory:(\d+)")    { $peak       = $matches[1] }
-                        if ($l -match "^Status:(.+)")          { $status     = $matches[1] }
+                        if ($l -match "^Status:(.+)")         { $status     = $matches[1] }
                     }
                     if ($status -ne "OK") {
                         Write-Host "  WARNING: Status=$status" -ForegroundColor DarkYellow
@@ -83,7 +85,7 @@ foreach ($version in $versions) {
                     Write-Host "  WARNING: Output file not created" -ForegroundColor DarkYellow
                 }
 
-                "$($version.Name),$size,$iter,$addTime,$searchTime,$layoutTime,$peak" | Out-File -Append $csvFile
+                "$($version.Name)${sep}$size${sep}$iter${sep}$addTime${sep}$searchTime${sep}$layoutTime${sep}$peak" | Out-File -Append $csvFile -Encoding UTF8
             }
         }
     }

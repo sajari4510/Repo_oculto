@@ -1,6 +1,0 @@
-TimeMs:12
-SearchTimeMs:2
-LayoutTimeMs:42
-PeakMemory:3
-Size:500
-Status:OK
